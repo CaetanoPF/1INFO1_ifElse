@@ -8,12 +8,23 @@
     Calcule quantos litros terá consumido durante o mês e qual o valor total gasto com combustível, considerando que o litro de combustível custa R$ 5,99.
     Se o custo ultrapassar R$ 200,00 o programa deverá sugerir que ele mude a sua residência para Araquari. Caso contrário, o programa deverá sugerir que ele continue residindo em Joinville.
     */
-    
-    //Entrada
 
+    //Entrada
+    const kmLitro = parseInt(prompt(`Quantos km por litro faz sua motocicleta?`));
+
+    const total = 1100 / kmLitro;
+    const valor = total * 5.99;
 
     //Processamento
-
+    if (valor > 200) {
+        alert(`Sugerimos que você mude a sua residência para Araquari!`)
+    }
+    else if (valor <= 200) {
+        alert(`Sugerimos que continue residindo em Joinville!`)
+    }
+    else {
+        alert(`Valor Inválido!`)
+    }
 
     //Saída
 

@@ -7,12 +7,25 @@
 
     *Não há valor definido para o litro da água.
     */
-    
-    //Entrada
 
+    //Entrada
+    const agua = parseInt(prompt(`Qual a quantidade de litros de água consumidos por uma residência diariamente?`).trim());
+    const pessoas = parseInt(prompt(`Qual a quantidade de pessoas que residem na casa?`));
+    const consumo = agua / pessoas;
 
     //Processamento
-
+    if (consumo >= 300) {
+        alert(`A residência será penalizada em 15% na tarifa de água.`)
+    }
+    else if (consumo > 500) {
+        alert(`A residência será penalizada em 30% na tarifa de água.`)
+    }
+    else if (consumo < 300) {
+        alert(`Parabéns pelo consumo consciente de água!`)
+    }
+    else {
+        alert(`Valor inválido!`);
+    }
 
     //Saída
 

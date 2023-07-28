@@ -7,12 +7,43 @@
     Peça para o usuário informar quantos computadores ele deseja comprar e também pergunte se pagará em dinheiro. Se o pagamento for em dinheiro, a loja dá mais 5% de desconto no valor total da compra.
     Calcule e apresente o valor total que o usuário deverá pagar pelos computadores.
     */
-    
-    //Entrada
 
+    //Entrada
+    const compu = parseInt(prompt(`Informe quantos computadores você deseja comprar:`));
+    const dinheiro = prompt(`Você pagará em dinheiro? (Sim ou Não)`).trim().toLowerCase();
 
     //Processamento
-
+    if (dinheiro == 'sim') {
+        if (compu < 5) {
+            alert(`Você deverá pagar R$ ${((compu * 1500) * 1.05).toFixed(2).replace(".", ",")}.`)
+        }
+        else if (compu >= 5) {
+            alert(`Você deverá pagar R$ ${(((compu * 1500) * 1.1) * 1.05).toFixed(2).replace(".", ",")}.`)
+        }
+        else if (compu > 10) {
+            alert(`Você deverá pagar R$ ${(((compu * 1500) * 1.15) * 1.05).toFixed(2).replace(".", ",")}.`)
+        }
+        else {
+            alert(`Valor Inválido`);
+        }
+    }
+    else if (dinheiro == 'não') {
+        if (compu < 5) {
+            alert(`Você deverá pagar R$ ${(compu * 1500).toFixed(2).replace(".", ",")}`)
+        }
+        else if (compu >= 5) {
+            alert(`Você deverá pagar R$ ${((compu * 1500) * 1.1).toFixed(2).replace(".", ",")}`)
+        }
+        else if (compu > 10) {
+            alert(`Você deverá pagar R$ ${((compu * 1500) * 1.15).toFixed(2).replace(".", ",")}`)
+        }
+        else {
+            alert(`Valor Inválido`);
+        }
+    }
+    else {
+        alert(`Valor Inválido`);
+    }
 
     //Saída
 
